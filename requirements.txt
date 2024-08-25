@@ -1,0 +1,5 @@
+modelscope
+lmdeploy==0.5.3
+streamlit
+transformers
+edge_tts
