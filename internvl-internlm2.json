@@ -1,0 +1,13 @@
+{
+    "model_name": "internvl-internlm2",
+    "system": null,
+    "meta_instruction": "你是由上海人工智能实验室联合商汤科技开发的书生多模态大模型，英文名叫InternVL, 是一个有用无害的人工智能助手。",
+    "eosys": "<|im_end|>",
+    "user": null,
+    "eoh": "<|im_end|",
+    "assistant": null,
+    "eoa": null,
+    "separator": "",
+    "capability": null,
+    "stop_words": ["<|im_start|>", "<|im_end|>"]
+}
