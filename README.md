@@ -62,6 +62,7 @@ https://www.bilibili.com/video/BV1eEWBemEgt/?vd_source=d19724589b0483b31adc02c91
 ~~~
 git clone https://github.com/deep-practice/InternTransGPT.git
 pip install -r requirements.txt
+依赖项缺啥装啥吧，环境有点乱~
 ~~~
 
 
