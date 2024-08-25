@@ -38,7 +38,7 @@
     项目也支持直接通过[LMDeploy](https://github.com/InternLM/LMDeploy)接入现有的llm进行对话
 
 #### RAG
-本项目直接对[茴香豆项目](https://github.com/InternLM/HuixiangDou)提供的能力进行整合，来实现基于知识库的智能问答
+本项目直接对[茴香豆项目](https://github.com/InternLM/HuixiangDou)提供的能力进行整合，来实现基于知识库的智能问答【正在实现中】
 
 ### ✊ 下一步计划
 
