@@ -1,0 +1,1 @@
+NPROC_PER_NODE=1 xtuner train /root/InternLM/code/XTuner/xtuner/configs/internvl/v2/internvl_v2_internlm2_2b_qlora_finetune.py --work-dir /root/InternLM/work_dir/internvl_ft_trafficsign_multiround  --deepspeed deepspeed_zero1

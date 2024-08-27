@@ -1,0 +1,1 @@
+python convert_to_official.py /root/InternLM/code/XTuner/xtuner/configs/internvl/v2/internvl_v2_internlm2_2b_qlora_finetune.py /root/InternLM/work_dir/internvl_ft_trafficsign/iter_20280.pth /root/InternLM/TrafficSign8B/
