@@ -99,7 +99,28 @@
     项目也支持直接通过[LMDeploy](https://github.com/InternLM/LMDeploy)接入现有的llm进行对话
 
 #### RAG
-本项目直接对[茴香豆项目](https://github.com/InternLM/HuixiangDou)提供的能力进行整合，来实现基于知识库的智能问答【正在实现中】
+本项目直接对[茴香豆项目](https://github.com/InternLM/HuixiangDou)提供的能力以API调用方式进行整合，实现对交通法规内容的准确输出
+
+#### 拒答功能
+ 对于政治、暴力、色情等问题进行拒答
+
+### 🚀 部分效果展示
+#### 1.交通法规具体内容问答（RAG）
+<img src="/assets/RAG.png">
+
+#### 2.交通标志内容问答
+<img src="/assets/traffic_sign.png">
+
+#### 3.驾考题目问答
+<img src="/assets/驾考题目问答.png">
+
+#### 4.交通事故报告分析
+<img src="/assets/traffic_report.png">
+
+#### 5.敏感问题拒答
+<img src="/assets/拒答.png">
+
+
 
 ### ✊ 下一步计划
 
@@ -107,12 +128,17 @@
   - [x] 借助大模型能力将非结构化数据转为QA对
   - [ ] 搜集交通报告、交通流量等多源数据集
 
+#### Prompt工程
+  - [ ] 优化Prompt来实现更好的意图识别
+  - [ ] 优化多轮对话
 
 #### 调用工具
 - [x] 交通事故报告分析：事故分类、实体抽取、事故原因的初步分析
 - [ ] 提供实时的路况信息、导航建议以及天气预报
 - [ ] 调用交通已有小模型来完成更加复杂的任务
 
+#### 代码重构
+- [ ] 以更模块化和优雅的方式重构代码
 
 ### 📺️ 讲解视频
 
@@ -136,8 +162,19 @@ pip install -r requirements.txt
 ~~~
 1.下载模型
 python3 download_model.py
+
 2.启动模型
 sh start_llm_server.sh
+
+3.构建知识库
+mkdir repodir
+cp -r data/traffic_policy repodir
+mkdir workdir
+python3 -m huixiangdou.service.feature_store
+
+4.启动茴香豆API Server
+server.py里面的启动端口改为33333，默认的23333已经被lmdeploy占用
+python3 -m huixiangdou.server --config_path config-cpu.ini
 ~~~
 
 **启动界面**
